@@ -1,0 +1,1618 @@
+Microsoft Windows [Version 10.0.19045.5737]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\yogap>cd documents
+
+C:\Users\yogap\Documents>cd golangTutorial
+
+C:\Users\yogap\Documents\golangTutorial>cd ..
+
+C:\Users\yogap\Documents>dir
+ Volume in drive C is Windows
+ Volume Serial Number is AC7E-C806
+
+ Directory of C:\Users\yogap\Documents
+
+30-04-2025  10:18    <DIR>          .
+30-04-2025  10:18    <DIR>          ..
+29-04-2025  18:57    <DIR>          golangTutorial
+17-03-2024  12:50    <DIR>          Visual Studio 2008
+17-03-2024  12:03    <DIR>          Visual Studio 2010
+02-04-2025  11:17    <DIR>          workspace-spring-tool-suite-4-4.29.1.RELEASE
+02-04-2025  11:46    <DIR>          workspace-sts
+               0 File(s)              0 bytes
+               7 Dir(s)  403,518,058,496 bytes free
+
+C:\Users\yogap\Documents>cd golangTutorial
+
+C:\Users\yogap\Documents\golangTutorial>echo AllDatatypes.go
+AllDatatypes.go
+
+C:\Users\yogap\Documents\golangTutorial>copy con AllDatatypes.go
+package main
+import "fmt"
+func Datatypes(){
+var boolvar bool =true
+var integer int = 5
+var floating float32 =7.5
+var word string ="Hi"
+fmt.Println(boolvar)
+fmt.Println(integer)
+fmt.Println(word)
+fmt.Println(floating)
+}
+^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>notepad main.go
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+main is runningtrue
+5
+Hi
+7.5
+
+C:\Users\yogap\Documents\golangTutorial>copy con complex.go
+package main
+import (
+"fmt"
+"math/cmplx"
+)
+var z = cmplx.Sqrt(-5 + 2i )
+fmt.Println(z)
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>notepad main.go
+
+C:\Users\yogap\Documents\golangTutorial>copy con complex.go
+package main
+Overwrite complex.go? (Yes/No/All): yes
+import(
+"fmt"
+"math/cmplx"
+)
+var z=cmplx.Sqrt(-5 + 2i)
+func ComplexDT(){
+fmt.Println(z)
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+main is runningtrue
+5
+Hi
+7.5
+(0.4388421169022545+2.27872385417085i)
+
+C:\Users\yogap\Documents\golangTutorial>copy con complex.go
+package main
+Overwrite complex.go? (Yes/No/All): yes
+import (
+"fmt"
+"math/cmplx"
+)
+var z complex128 =cmplx.Sqrt( -5 + 2i)
+func ComplexDT(){
+fmt.Println(z)
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+main is runningtrue
+5
+Hi
+7.5
+(0.4388421169022545+2.27872385417085i)
+
+C:\Users\yogap\Documents\golangTutorial>copy con TypeConversion2.go
+package main
+import "fmt"
+import "math"
+func typeconv2(){
+var x,y=5,6
+var z1 float32 = math.Sqrt(float32(x*x + y*y))
+var z2 uint=unint (z1)
+fmt.Println(z2)
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+# test
+.\TypeConversion2.go:6:18: cannot use math.Sqrt(float32(x * x + y * y)) (value of type float64) as float32 value in variable declaration
+.\TypeConversion2.go:6:28: cannot use float32(x * x + y * y) (value of type float32) as float64 value in argument to math.Sqrt
+.\TypeConversion2.go:7:13: undefined: unint
+
+C:\Users\yogap\Documents\golangTutorial>copy con TypeConversion2.go
+package main
+Overwrite TypeConversion2.go? (Yes/No/All): yes
+import "fmt"
+import "math"
+func typeconv2()[
+^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>copy con TypeConversion2.go
+package main
+Overwrite TypeConversion2.go? (Yes/No/All): yes
+import (
+"fmt"
+"math"
+)
+func typeconv2(){
+var x,y=5,6
+var z1 float64 = math.Sqrt(float32(x*x +y*y))
+var z2 unit = uint(z1)
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+# test
+.\TypeConversion2.go:3:1: "fmt" imported and not used
+.\TypeConversion2.go:8:28: cannot use float32(x * x + y * y) (value of type float32) as float64 value in argument to math.Sqrt
+.\TypeConversion2.go:9:5: declared and not used: z2
+.\TypeConversion2.go:9:8: undefined: unit
+
+C:\Users\yogap\Documents\golangTutorial>copy co TypeConversion2.go
+The system cannot find the file specified.
+
+C:\Users\yogap\Documents\golangTutorial>copy con TypeConversion2.go
+package main
+Overwrite TypeConversion2.go? (Yes/No/All): yes
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>copy con TypeConversion2.go
+package main
+Overwrite TypeConversion2.go? (Yes/No/All): yes
+import (
+"fmt"
+"math"
+)
+func typeconv2(){
+var x,y=5,6
+var z1 float64 = math.Sqrt(float32(x*x +y*y))
+var z2 unit = uint(z1)
+fmt.Println(z2)
+^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>copy con TypeConversion2.go
+package main
+Overwrite TypeConversion2.go? (Yes/No/All): yes
+import (
+"fmt"
+"math"
+)
+func typeconv2(){
+var x,y=5,6
+var z1 float64 = math.Sqrt(float64(x*x +y*y))
+var z2 unint =unint (z1)
+fmt.Println(z2)
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+# test
+.\TypeConversion2.go:9:8: undefined: unint
+
+C:\Users\yogap\Documents\golangTutorial>copy con TypeConversion2.go
+package main
+Overwrite TypeConversion2.go? (Yes/No/All): yes
+import (
+"fmt"
+"math"
+)
+func typeconv2(){
+var x,y=5,6
+var z1 float64 = math.Sqrt(float32(x*x +y*y))
+var z2 uint = uint(z2)
+fmt.Println(z2)
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+# test
+.\TypeConversion2.go:8:5: declared and not used: z1
+.\TypeConversion2.go:8:28: cannot use float32(x * x + y * y) (value of type float32) as float64 value in argument to math.Sqrt
+.\TypeConversion2.go:9:20: undefined: z2
+
+C:\Users\yogap\Documents\golangTutorial>copy con TypeConversion2.go
+package main
+Overwrite TypeConversion2.go? (Yes/No/All): yes
+import(
+"fmt"
+"math"
+)
+func typeconv2(){
+var x,y=5,6
+var z1 float64 =math.Sqrt(float64(x*x + y*y))
+var z2 uint = uint(z2)
+fmt.Println(z2)
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+# test
+.\TypeConversion2.go:8:5: declared and not used: z1
+.\TypeConversion2.go:9:20: undefined: z2
+
+C:\Users\yogap\Documents\golangTutorial>copy con TypeConversion2.go
+package main
+Overwrite TypeConversion2.go? (Yes/No/All): yes
+import(
+"fmt"
+"math"
+)
+func typeconv2(){
+var x,y=5,6
+var z1 float64 = math.Sqrt (float64(x*x + y*y))
+var z2 uint= uint (z1)
+fmt.Println(z2)
+}
+^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+main is runningtrue
+5
+Hi
+7.5
+(0.4388421169022545+2.27872385417085i)
+7
+
+C:\Users\yogap\Documents\golangTutorial>copy con NumericConstant.go
+package main
+import (
+"fmt"
+)
+const(
+big =1<<99
+small =big >>99
+)
+func Numconst(){
+fmt.Println(big)
+fmt.Println(small)
+fmt.Println(small * 2 +1)
+fmt.Println(float64(small) *0.1)
+fmt.Println(float64(big) *0.1)
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+# test
+.\NumericConstant.go:10:13: cannot use big (untyped int constant 633825300114114700748351602688) as int value in argument to fmt.Println (overflows)
+
+C:\Users\yogap\Documents\golangTutorial>copy con NumericConstant.go
+package main
+Overwrite NumericConstant.go? (Yes/No/All): yes
+import "fmt"
+const(
+big = 1 << 99
+small = big >>99
+)
+func Numconst(){
+fmt.Println(float64(big))
+fmt.Println(small)
+fmt.Println(small * 2 +1)
+fmt.Println(float64(small) *0.1)
+fmt.Println(float64(big) *0.1)
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+main is runningtrue
+5
+Hi
+7.5
+(0.4388421169022545+2.27872385417085i)
+7
+6.338253001141147e+29
+1
+3
+0.1
+6.338253001141147e+28
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+main is runningtrue
+5
+Hi
+7.5
+(0.4388421169022545+2.27872385417085i)
+7
+6.338253001141147e+29
+1
+3
+0.1
+6.338253001141147e+28
+
+C:\Users\yogap\Documents\golangTutorial>copy con SimpleFunction.go
+package main
+import "fmt"
+func Welcome(){
+fmt.Println("Welcome to the page")
+}
+func Hi(){
+func Welcome()
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+# test
+.\SimpleFunction.go:7:6: syntax error: unexpected name Welcome, expected (
+
+C:\Users\yogap\Documents\golangTutorial>copy con SimpleFunction.go
+package main
+Overwrite SimpleFunction.go? (Yes/No/All): yes
+import "fmt"
+func Welcome(){
+fmt.Println("Welcome to the page ")
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+# test
+.\main.go:35:1: undefined: Hi
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+main is runningtrue
+5
+Hi
+7.5
+(0.4388421169022545+2.27872385417085i)
+7
+6.338253001141147e+29
+1
+3
+0.1
+6.338253001141147e+28
+Welcome to the page
+
+C:\Users\yogap\Documents\golangTutorial>copy con ParameterFunction.go
+package main
+import "fmt"
+func FirstName(fname string){
+fmt.Println("Hi " , fname ," welcome to the office")
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+main is runningtrue
+5
+Hi
+7.5
+(0.4388421169022545+2.27872385417085i)
+7
+6.338253001141147e+29
+1
+3
+0.1
+6.338253001141147e+28
+Welcome to the page
+Hi  Bharathi  welcome to the office
+Hi  Yoga  welcome to the office
+Hi  Vasanth  welcome to the office
+
+C:\Users\yogap\Documents\golangTutorial>copy con MultiParameters.go
+package main
+import "fmt"
+func mulpara(fname string, age int){
+fmt.Println("The age of the person",fname,"is",age)
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+main is runningtrue
+5
+Hi
+7.5
+(0.4388421169022545+2.27872385417085i)
+7
+6.338253001141147e+29
+1
+3
+0.1
+6.338253001141147e+28
+Welcome to the page
+Hi  Bharathi  welcome to the office
+Hi  Yoga  welcome to the office
+Hi  Vasanth  welcome to the office
+The age of the person Bharathi is 22
+The age of the person yoga is 21
+The age of the person vasanth is 25
+
+C:\Users\yogap\Documents\golangTutorial>copy con Retuntype.go
+package main
+import "fmt"
+func add(num1 int, num2 int) int{
+return num1+num2
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+# test
+.\Retuntype.go:2:8: "fmt" imported and not used
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+# test
+.\Retuntype.go:2:8: "fmt" imported and not used
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+# test
+.\Retuntype.go:2:8: "fmt" imported and not used
+
+C:\Users\yogap\Documents\golangTutorial>copy con Retuntype.go
+package main
+Overwrite Retuntype.go? (Yes/No/All): yes
+func add(num1 int, num2 int) int{
+return num1+num2
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+main is runningtrue
+5
+Hi
+7.5
+(0.4388421169022545+2.27872385417085i)
+7
+6.338253001141147e+29
+1
+3
+0.1
+6.338253001141147e+28
+Welcome to the page
+Hi  Bharathi  welcome to the office
+Hi  Yoga  welcome to the office
+Hi  Vasanth  welcome to the office
+The age of the person Bharathi is 22
+The age of the person yoga is 21
+The age of the person vasanth is 25
+7
+
+C:\Users\yogap\Documents\golangTutorial>copy con Returntype2.go
+package main
+func div(num1 int , num2 int)int{
+return num1/num2
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+main is runningtrue
+5
+Hi
+7.5
+(0.4388421169022545+2.27872385417085i)
+7
+6.338253001141147e+29
+1
+3
+0.1
+6.338253001141147e+28
+Welcome to the page
+Hi  Bharathi  welcome to the office
+Hi  Yoga  welcome to the office
+Hi  Vasanth  welcome to the office
+The age of the person Bharathi is 22
+The age of the person yoga is 21
+The age of the person vasanth is 25
+7
+7
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+main is runningtrue
+5
+Hi
+7.5
+(0.4388421169022545+2.27872385417085i)
+7
+6.338253001141147e+29
+1
+3
+0.1
+6.338253001141147e+28
+Welcome to the page
+Hi  Bharathi  welcome to the office
+Hi  Yoga  welcome to the office
+Hi  Vasanth  welcome to the office
+The age of the person Bharathi is 22
+The age of the person yoga is 21
+The age of the person vasanth is 25
+7
+2
+
+C:\Users\yogap\Documents\golangTutorial>copy con Returntype3.go
+package main
+func Names(fname string, lname string) string{
+return fname + lname
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>}go run .
+'}go' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+main is runningtrue
+5
+Hi
+7.5
+(0.4388421169022545+2.27872385417085i)
+7
+6.338253001141147e+29
+1
+3
+0.1
+6.338253001141147e+28
+Welcome to the page
+Hi  Bharathi  welcome to the office
+Hi  Yoga  welcome to the office
+Hi  Vasanth  welcome to the office
+The age of the person Bharathi is 22
+The age of the person yoga is 21
+The age of the person vasanth is 25
+7
+2
+BharathiV
+
+C:\Users\yogap\Documents\golangTutorial>copy con NamedReturnVal.go
+package main
+func sum(num1 int,num2 int)(res int){
+res=num1+num2
+return
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+main is runningtrue
+5
+Hi
+7.5
+(0.4388421169022545+2.27872385417085i)
+7
+6.338253001141147e+29
+1
+3
+0.1
+6.338253001141147e+28
+Welcome to the page
+Hi  Bharathi  welcome to the office
+Hi  Yoga  welcome to the office
+Hi  Vasanth  welcome to the office
+The age of the person Bharathi is 22
+The age of the person yoga is 21
+The age of the person vasanth is 25
+7
+2
+BharathiV
+12
+
+C:\Users\yogap\Documents\golangTutorial>copy con NamedReturnVal2.go
+package main
+func sum1(num1 int, num2 int)(res int){
+res=num1+num2
+return res
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+main is runningtrue
+5
+Hi
+7.5
+(0.4388421169022545+2.27872385417085i)
+7
+6.338253001141147e+29
+1
+3
+0.1
+6.338253001141147e+28
+Welcome to the page
+Hi  Bharathi  welcome to the office
+Hi  Yoga  welcome to the office
+Hi  Vasanth  welcome to the office
+The age of the person Bharathi is 22
+The age of the person yoga is 21
+The age of the person vasanth is 25
+7
+2
+BharathiV
+12
+17
+
+C:\Users\yogap\Documents\golangTutorial>copy con NamedReturnVal3.go
+package main
+func ret3(num1, num2) (res int){
+res=num1/num2
+return res
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+# test
+.\NamedReturnVal3.go:2:11: undefined: num1
+.\NamedReturnVal3.go:2:17: undefined: num2
+.\NamedReturnVal3.go:3:5: undefined: num1
+.\NamedReturnVal3.go:3:10: undefined: num2
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+# test
+.\NamedReturnVal3.go:2:11: undefined: num1
+.\NamedReturnVal3.go:2:17: undefined: num2
+.\NamedReturnVal3.go:3:5: undefined: num1
+.\NamedReturnVal3.go:3:10: undefined: num2
+
+C:\Users\yogap\Documents\golangTutorial>copy con NamedReturnVal3.go
+package main
+Overwrite NamedReturnVal3.go? (Yes/No/All): yes
+func ret3(num1 int, num2 int) (res int){
+res=num1/num2
+return res
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+main is runningtrue
+5
+Hi
+7.5
+(0.4388421169022545+2.27872385417085i)
+7
+6.338253001141147e+29
+1
+3
+0.1
+6.338253001141147e+28
+Welcome to the page
+Hi  Bharathi  welcome to the office
+Hi  Yoga  welcome to the office
+Hi  Vasanth  welcome to the office
+The age of the person Bharathi is 22
+The age of the person yoga is 21
+The age of the person vasanth is 25
+7
+2
+BharathiV
+12
+17
+2
+
+C:\Users\yogap\Documents\golangTutorial>copy con StoreReturnVal.go
+package main
+func myfun(num1 , num2 int) (res int){
+res=num1*num2
+return res
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+main is runningtrue
+5
+Hi
+7.5
+(0.4388421169022545+2.27872385417085i)
+7
+6.338253001141147e+29
+1
+3
+0.1
+6.338253001141147e+28
+Welcome to the page
+Hi  Bharathi  welcome to the office
+Hi  Yoga  welcome to the office
+Hi  Vasanth  welcome to the office
+The age of the person Bharathi is 22
+The age of the person yoga is 21
+The age of the person vasanth is 25
+7
+2
+BharathiV
+12
+17
+2
+10
+
+C:\Users\yogap\Documents\golangTutorial>copy con SwapNumbers.go
+package main
+func swap(num1,num2 int) int
+return num2, num1
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+# test
+.\SwapNumbers.go:3:1: syntax error: non-declaration statement outside function body
+
+C:\Users\yogap\Documents\golangTutorial>copy con SwapNumbers.go
+package main
+Overwrite SwapNumbers.go? (Yes/No/All): yes
+func swap(num1, num2 int) int{
+return num2, num1
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+# test
+.\SwapNumbers.go:3:14: too many return values
+        have (int, int)
+        want (int)
+
+C:\Users\yogap\Documents\golangTutorial>copy con SwapNumbers.go
+package main
+Overwrite SwapNumbers.go? (Yes/No/All): yes
+func swap(num1,num2)(int,int){
+return num2, num1
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+# test
+.\SwapNumbers.go:2:11: undefined: num1
+.\SwapNumbers.go:2:16: undefined: num2
+.\SwapNumbers.go:3:8: undefined: num2
+.\SwapNumbers.go:3:14: undefined: num1
+
+C:\Users\yogap\Documents\golangTutorial>copy con SwapNumbers.go
+package main
+Overwrite SwapNumbers.go? (Yes/No/All): yes
+func swap(num1, num2 int)(int,int){
+return num2,num1
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+main is runningtrue
+5
+Hi
+7.5
+(0.4388421169022545+2.27872385417085i)
+7
+6.338253001141147e+29
+1
+3
+0.1
+6.338253001141147e+28
+Welcome to the page
+Hi  Bharathi  welcome to the office
+Hi  Yoga  welcome to the office
+Hi  Vasanth  welcome to the office
+The age of the person Bharathi is 22
+The age of the person yoga is 21
+The age of the person vasanth is 25
+7
+2
+BharathiV
+12
+17
+2
+10
+8 5
+
+C:\Users\yogap\Documents\golangTutorial>copy con SwapVar2.go
+package main
+import "fmt"
+func swap2(w1, w2 string)(string, string){
+return w2,21
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+# test
+.\SwapVar2.go:2:8: "fmt" imported and not used
+.\SwapVar2.go:4:11: cannot use 21 (untyped int constant) as string value in return statement
+.\main.go:50:11: assignment mismatch: 1 variable but swap2 returns 2 values
+
+C:\Users\yogap\Documents\golangTutorial>copy con SwapVar2.go
+package main
+Overwrite SwapVar2.go? (Yes/No/All): yes
+func swap2(w1,w2 string)(string, string){
+return w2, w1
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+# test
+.\main.go:50:11: assignment mismatch: 1 variable but swap2 returns 2 values
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+main is runningtrue
+5
+Hi
+7.5
+(0.4388421169022545+2.27872385417085i)
+7
+6.338253001141147e+29
+1
+3
+0.1
+6.338253001141147e+28
+Welcome to the page
+Hi  Bharathi  welcome to the office
+Hi  Yoga  welcome to the office
+Hi  Vasanth  welcome to the office
+The age of the person Bharathi is 22
+The age of the person yoga is 21
+The age of the person vasanth is 25
+7
+2
+BharathiV
+12
+17
+2
+10
+8 5
+Vasanth Bharathi
+
+C:\Users\yogap\Documents\golangTutorial>copy con MultiReturnValues.go
+package main
+func values(a int, b string) (int, string){
+s1=a*a
+s2=b+"welcome"
+return
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+# test
+.\MultiReturnValues.go:3:1: undefined: s1
+.\MultiReturnValues.go:4:1: undefined: s2
+.\MultiReturnValues.go:5:1: not enough return values
+        have ()
+        want (int, string)
+
+C:\Users\yogap\Documents\golangTutorial>copy con MultiReturnValues.go
+package main
+Overwrite MultiReturnValues.go? (Yes/No/All): yes
+func values(a int, b string) (num int, txt string){
+num=a*a
+txt=b+"welcome"
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+# test
+.\MultiReturnValues.go:5:1: missing return
+
+C:\Users\yogap\Documents\golangTutorial>copy con MultiReturnValues.go
+package main
+Overwrite MultiReturnValues.go? (Yes/No/All): yes
+func values(a int, b string) (num int, txt string){
+num=a*a
+txt=b+"welcome"
+return
+}
+^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+main is runningtrue
+5
+Hi
+7.5
+(0.4388421169022545+2.27872385417085i)
+7
+6.338253001141147e+29
+1
+3
+0.1
+6.338253001141147e+28
+Welcome to the page
+Hi  Bharathi  welcome to the office
+Hi  Yoga  welcome to the office
+Hi  Vasanth  welcome to the office
+The age of the person Bharathi is 22
+The age of the person yoga is 21
+The age of the person vasanth is 25
+7
+2
+BharathiV
+12
+17
+2
+10
+8 5
+Vasanth Bharathi
+25 Hellowelcome
+
+C:\Users\yogap\Documents\golangTutorial>copy con OmitVarForFun.go
+package main
+func val(num int, text string)(n int, t string){
+n:=num +num
+t:=text + "hi"
+return
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+# test
+.\OmitVarForFun.go:3:2: no new variables on left side of :=
+.\OmitVarForFun.go:4:2: no new variables on left side of :=
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+# test
+.\OmitVarForFun.go:3:2: no new variables on left side of :=
+.\OmitVarForFun.go:4:2: no new variables on left side of :=
+
+C:\Users\yogap\Documents\golangTutorial>copy con OmitVarForFun.go
+package main
+Overwrite OmitVarForFun.go? (Yes/No/All): yes
+func val(num int, text string)(n int, t string){
+n=num +  num
+t = text + "hi "
+return
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+main is runningtrue
+5
+Hi
+7.5
+(0.4388421169022545+2.27872385417085i)
+7
+6.338253001141147e+29
+1
+3
+0.1
+6.338253001141147e+28
+Welcome to the page
+Hi  Bharathi  welcome to the office
+Hi  Yoga  welcome to the office
+Hi  Vasanth  welcome to the office
+The age of the person Bharathi is 22
+The age of the person yoga is 21
+The age of the person vasanth is 25
+7
+2
+BharathiV
+12
+17
+2
+10
+8 5
+Vasanth Bharathi
+25 Hellowelcome
+kittyhi
+
+C:\Users\yogap\Documents\golangTutorial>copy con Recurssion.go
+package main
+func rec(x int) (res int){
+if x==11
+return 0
+^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>copy con Recurssion.go
+package main
+Overwrite Recurssion.go? (Yes/No/All): yes
+import "fmt"
+func rec(x int )(res int){
+if x==11
+return 0
+fmt.Println(x)
+return rec(x+1)
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+# test
+.\Recurssion.go:5:1: syntax error: unexpected keyword return, expected expression
+
+C:\Users\yogap\Documents\golangTutorial>copy con Recurssion.go
+package main
+Overwrite Recurssion.go? (Yes/No/All): yes
+func rec(x int) (res int){
+if x==11{
+return 0
+}
+fmt.Println(x)
+return rec(x+1)
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+# test
+.\Recurssion.go:6:1: undefined: fmt
+
+C:\Users\yogap\Documents\golangTutorial>copy con Recurssion.go
+package main
+Overwrite Recurssion.go? (Yes/No/All): yes
+import "fmt"
+func rec(x int) (res int){
+if x==11{
+return 0
+}
+fmt.Println(x)
+return rec(x+1)
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+main is running2
+3
+4
+5
+6
+7
+8
+9
+10
+
+C:\Users\yogap\Documents\golangTutorial>copy con LoopingStatement.go
+package main
+import "fmt"
+func PrintNum5(){
+for i:=0;i<5;i++ {
+fmt.Println(i)
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+# test
+.\LoopingStatement.go:6:2: syntax error: unexpected EOF, expected }
+
+C:\Users\yogap\Documents\golangTutorial>copy con LoopingStatement.go
+package main
+Overwrite LoopingStatement.go? (Yes/No/All): yes
+import "fmt"
+func PrintNum5(){
+for i:=0;i<5;i++ {
+fmt.Println(i)
+}
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+main is running2
+3
+4
+5
+6
+7
+8
+9
+10
+0
+1
+2
+3
+4
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+main is running0
+1
+2
+3
+4
+
+C:\Users\yogap\Documents\golangTutorial>copy con MultiplesOf100.go
+package main
+import "fmt"
+func mul100(){
+for i:=0;i<=100;i+=10 {
+fmt.Print(i, " ")
+}
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+main is running0
+1
+2
+3
+4
+0 10 20 30 40 50 60 70 80 90 100
+C:\Users\yogap\Documents\golangTutorial>
+C:\Users\yogap\Documents\golangTutorial>copy con MulTables13.go
+package main
+import "fmt"
+func Tables13(){
+for i:=1;i<=10;i++ {
+fmt.Println("13 x ",i,"=",i*13)
+}}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+main is running0
+1
+2
+3
+4
+0 10 20 30 40 50 60 70 80 90 100 13 x  1 = 13
+13 x  2 = 26
+13 x  3 = 39
+13 x  4 = 52
+13 x  5 = 65
+13 x  6 = 78
+13 x  7 = 91
+13 x  8 = 104
+13 x  9 = 117
+13 x  10 = 130
+
+C:\Users\yogap\Documents\golangTutorial>copy con SumOfNum.go
+package main
+import "fmt"
+func sumofnum(){
+for i:=0;i<10;i++ {
+sum +=sum
+}}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+# test
+.\SumOfNum.go:2:8: "fmt" imported and not used
+.\SumOfNum.go:5:1: invalid operation: operator + not defined on sum (value of type func(num1 int, num2 int) (res int))
+.\SumOfNum.go:5:1: cannot assign to sum (neither addressable nor a map index expression)
+
+C:\Users\yogap\Documents\golangTutorial>copy con SumOfNum.go
+package main
+Overwrite SumOfNum.go? (Yes/No/All): yes
+func sumofnum(){
+for i:=0;i<10;i++ {
+sum +=sum
+fmt.Println(sum)
+}}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+# test
+.\SumOfNum.go:4:1: invalid operation: operator + not defined on sum (value of type func(num1 int, num2 int) (res int))
+.\SumOfNum.go:4:1: cannot assign to sum (neither addressable nor a map index expression)
+.\SumOfNum.go:5:1: undefined: fmt
+
+C:\Users\yogap\Documents\golangTutorial>copy con SumOfNum.go
+package main
+Overwrite SumOfNum.go? (Yes/No/All): yes
+
+func sumofnum(){
+for i:=0;i<10;i++ {
+sum +=i
+fmt.Println(sum)
+}}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+# test
+.\SumOfNum.go:5:1: invalid operation: sum += i (mismatched types func(num1 int, num2 int) (res int) and int)
+.\SumOfNum.go:5:1: cannot assign to sum (neither addressable nor a map index expression)
+.\SumOfNum.go:6:1: undefined: fmt
+
+C:\Users\yogap\Documents\golangTutorial>copy con SumOfNum.go
+package main
+Overwrite SumOfNum.go? (Yes/No/All): yes
+func sumofnum(){
+for i:=0;i<10;i++ {
+sum2 +=i
+fmt.Println(sum2)
+}}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+# test
+.\SumOfNum.go:4:1: undefined: sum2
+.\SumOfNum.go:5:1: undefined: fmt
+.\SumOfNum.go:5:13: undefined: sum2
+
+C:\Users\yogap\Documents\golangTutorial>copy con SumOfNum.go
+package main
+Overwrite SumOfNum.go? (Yes/No/All): yes
+import "fmt"
+func sumofnum(){
+for i:=0 ; i<10; i++ {
+sum2 +=i
+}
+fmt.Println(sum)
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+# test
+.\SumOfNum.go:5:1: undefined: sum2
+
+C:\Users\yogap\Documents\golangTutorial>copy con SumOfNum.go
+package main
+Overwrite SumOfNum.go? (Yes/No/All): yes
+import "fmt"
+func sumofnum(){
+sum :=0
+for i:=0 ; i<10;i++ {
+sum + =i
+}
+fmt.Println(sum)
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+# test
+.\SumOfNum.go:6:7: syntax error: unexpected =, expected expression
+
+C:\Users\yogap\Documents\golangTutorial>copy con SumOfNum.go
+package main
+Overwrite SumOfNum.go? (Yes/No/All): yes
+import "fmt'
+^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>copy con SumOfNum.go
+package main
+Overwrite SumOfNum.go? (Yes/No/All): yes
+import "fmt"
+func sumofnum(){
+sum :=0
+for i:=0;i<10;i++ {
+sum :=0
+^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>copy con SumOfNum.go
+package main
+Overwrite SumOfNum.go? (Yes/No/All): yes
+import "fmt"
+func sumofnum(){
+sum :=0
+for i:=0 ; i<10 ; i++  {
+sum += i
+}
+fmt.Println(sum)
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+main is running0
+1
+2
+3
+4
+0 10 20 30 40 50 60 70 80 90 100 13 x  1 = 13
+13 x  2 = 26
+13 x  3 = 39
+13 x  4 = 52
+13 x  5 = 65
+13 x  6 = 78
+13 x  7 = 91
+13 x  8 = 104
+13 x  9 = 117
+13 x  10 = 130
+
+C:\Users\yogap\Documents\golangTutorial>copy con SumOfNum.go
+package main
+Overwrite SumOfNum.go? (Yes/No/All): yes
+import "fmt"
+func sumofnum(){
+sum:=0
+if i:=0;i<10;i++ {
+sum +=0
+}}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+# test
+.\SumOfNum.go:5:13: syntax error: unexpected semicolon, expected { after if clause
+
+C:\Users\yogap\Documents\golangTutorial>copy con SumOfNum.go
+package main
+Overwrite SumOfNum.go? (Yes/No/All): yes
+import "fmt"
+func sumofnum(){
+^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>copy con SumofNum.go
+package main
+Overwrite SumofNum.go? (Yes/No/All): yes
+import "fmt:
+^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>copy con SumofNum.go
+package main
+Overwrite SumofNum.go? (Yes/No/All): yes
+import "fmt"
+sum :=0
+for i:=0 ; i<10 ; i++ {
+sum += i
+}
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+# test
+.\SumOfNum.go:3:1: syntax error: non-declaration statement outside function body
+
+C:\Users\yogap\Documents\golangTutorial>copy con SumofNum.go
+package main
+Overwrite SumofNum.go? (Yes/No/All): yes
+import "fmt"
+func sumofnum(){
+sum += 0
+for i:=0 ; i<10 ; i++ {
+sum += i
+}
+fmt.Println("the sum is ",sum)
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+# test
+.\SumOfNum.go:4:1: cannot assign to sum (neither addressable nor a map index expression)
+.\SumOfNum.go:4:8: cannot convert 0 (untyped int constant) to type func(num1 int, num2 int) (res int)
+.\SumOfNum.go:6:1: invalid operation: sum += i (mismatched types func(num1 int, num2 int) (res int) and int)
+.\SumOfNum.go:6:1: cannot assign to sum (neither addressable nor a map index expression)
+
+C:\Users\yogap\Documents\golangTutorial>copy con SumOfNum.go
+package main
+Overwrite SumOfNum.go? (Yes/No/All): yes
+import "fmt"
+func sumofnum(){
+sum := 0
+for i:=0 ; i<10 ; i++ {
+sum += i
+}
+fmt.Println("the sum is ",sum)
+}
+^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+main is running0
+1
+2
+3
+4
+0 10 20 30 40 50 60 70 80 90 100 13 x  1 = 13
+13 x  2 = 26
+13 x  3 = 39
+13 x  4 = 52
+13 x  5 = 65
+13 x  6 = 78
+13 x  7 = 91
+13 x  8 = 104
+13 x  9 = 117
+13 x  10 = 130
+the sum is  45
+0x37b1c0
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+main is runningthe sum is  45
+0xa5af80
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+main is runningthe sum is  45
+
+C:\Users\yogap\Documents\golangTutorial>copy con OptionalFor.go
+package main
+import "fmt"
+func NoIniti(){
+for ;i<=1000; {
+fmt.Println("The values between 1000")
+sum :=0
+^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>copy con OptionalFor.go
+package main
+Overwrite OptionalFor.go? (Yes/No/All): yes
+import "fmt"
+func NoInitfun(){
+^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>copy con OptionalFor.go
+package main
+Overwrite OptionalFor.go? (Yes/No/All): yes
+import "fmt"
+sum :=0
+func NoInitfun(){
+fmt.Println("The values between 1000")
+for ;i<1000; {
+sum += i
+}
+fmt.Println(sum)
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+# test
+.\OptionalFor.go:3:1: syntax error: non-declaration statement outside function body
+
+C:\Users\yogap\Documents\golangTutorial>copy con OptionalFor.go
+package main
+Overwrite OptionalFor.go? (Yes/No/All): yes
+import "fmt"
+func NoInitfun(){
+sum := 0
+for ; i<=1000 ; {
+sum += sum
+}
+fmt.Println(sum)
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+# test
+.\OptionalFor.go:5:7: undefined: i
+
+C:\Users\yogap\Documents\golangTutorial>copy con OptionalFor.go
+package main
+Overwrite OptionalFor.go? (Yes/No/All): yes
+import "fmt"
+func NoInitfun(){
+sum := 0
+for ; sum<=1000 ; {
+sum += sum
+}
+fmt.Println("The sum of the value is ", sum)
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+main is runningthe sum is  45
+Microsoft Windows [Version 10.0.19045.5737]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\yogap>cd documents
+
+C:\Users\yogap\Documents>cd golangTutorial
+
+C:\Users\yogap\Documents\golangTutorial>copy con OptionalFor.go
+package main
+Overwrite OptionalFor.go? (Yes/No/All): yes
+import "fmt"
+func NoInitfun() {
+sum := 0
+for ; sum<=1000 ; {
+sum += sum
+}
+fmt.Println("The sum of value is", sum)
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+main is runningexit status 0xc000013a
+
+C:\Users\yogap\Documents\golangTutorial>copy con OptionalFor.go
+package main
+Overwrite OptionalFor.go? (Yes/No/All): yes
+import "fmt"
+func NoInitfun(){
+sum :=1
+for ; sum<=100; {
+sum +=sum
+}
+fmt.Prinltn("The sum of value is", sum)
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+# test
+.\OptionalFor.go:8:5: undefined: fmt.Prinltn
+
+C:\Users\yogap\Documents\golangTutorial>copy con OptionalFor.go
+package main
+Overwrite OptionalFor.go? (Yes/No/All): yes
+import "fmt"
+func NoInitfun(){
+sum :=1
+for ; sum<=1000 ; {
+sum += sum
+}
+fmt. Println("The sum of value is " , sum)
+}
+^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+main is runningThe sum of value is  1024
+Microsoft Windows [Version 10.0.19045.5737]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\yogap>cd documents
+
+C:\Users\yogap\Documents>cd golangTutorial
+
+C:\Users\yogap\Documents\golangTutorial>copy con OptionalFor.go
+package main
+Overwrite OptionalFor.go? (Yes/No/All): yes
+import "fmt"
+func NoInitfun() {
+sum := 0
+for ; sum<=1000 ; {
+sum += sum
+}
+fmt.Println("The sum of value is", sum)
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+main is runningexit status 0xc000013a
+
+C:\Users\yogap\Documents\golangTutorial>copy con OptionalFor.go
+package main
+Overwrite OptionalFor.go? (Yes/No/All): yes
+import "fmt"
+func NoInitfun(){
+sum :=1
+for ; sum<=100; {
+sum +=sum
+}
+fmt.Prinltn("The sum of value is", sum)
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+# test
+.\OptionalFor.go:8:5: undefined: fmt.Prinltn
+
+C:\Users\yogap\Documents\golangTutorial>copy con OptionalFor.go
+package main
+Overwrite OptionalFor.go? (Yes/No/All): yes
+import "fmt"
+func NoInitfun(){
+sum :=1
+for ; sum<=1000 ; {
+sum += sum
+}
+fmt. Println("The sum of value is " , sum)
+}
+^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+main is runningThe sum of value is  1024
+
+C:\Users\yogap\Documents\golangTutorial>copy con OptionalFor1.go
+package main
+import "fmt"
+func NoInitfun1(){
+sum :=1
+for sum<=1000 {
+sum += sum
+}
+fmt.prinltn("The sum of value is ", sum)
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>notepad main.go
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+# test
+.\OptionalFor1.go:8:5: undefined: fmt.prinltn
+
+C:\Users\yogap\Documents\golangTutorial>copy con OptionalFor1.go
+package main
+Overwrite OptionalFor1.go? (Yes/No/All): yes
+import "fmt"
+import "fmt"
+func NoInitfun1(){
+sum :=1
+for sum<=1000 {
+sum += sum
+}
+fmt.println(sum)
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+# test
+.\OptionalFor1.go:3:8: fmt redeclared in this block
+        .\OptionalFor1.go:2:8: other declaration of fmt
+.\OptionalFor1.go:3:8: "fmt" imported and not used
+.\OptionalFor1.go:9:5: undefined: fmt.println
+
+C:\Users\yogap\Documents\golangTutorial>copy con OptionalFor1.go
+package main
+Overwrite OptionalFor1.go? (Yes/No/All): yes
+import "fmt"
+func NoInitfun1(){
+sum :=1
+for sum<=1000 {
+sum += sum
+}
+fmt.println(sum)
+}^Z
+        1 file(s) copied.
+
+C:\Users\yogap\Documents\golangTutorial>go run .
+# test
+.\OptionalFor1.go:8:5: undefined: fmt.println
+
+C:\Users\yogap\Documents\golangTutorial>
